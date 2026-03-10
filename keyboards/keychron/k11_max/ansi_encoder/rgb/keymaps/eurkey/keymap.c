@@ -104,14 +104,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, KC_LALT,  KC_LWIN, KC_SPC, LT(FN2, KC_TAB), LT(FN2, KC_BSPC), LT(MAC_FN1, KC_ENT), KC_RALT,                       KC_LEFT, KC_DOWN, KC_RGHT),
 
     [MAC_FN1] = LAYOUT_69_ansi(
-        KC_GRV,  KC_BRID,  KC_BRIU, KC_MCTRL, KC_LNPAD,RGB_VAD, RGB_VAI,  KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,          RGB_TOG,
+        KC_GRV,  KC_EXLM,  KC_AT,   KC_HASH,  KC_DLR,  KC_PERC, KC_CIRC,  KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,  KC_UNDS,  KC_PLUS,  _______,          RGB_TOG,
         _______, KC_GRAVE, KC_LABK, KC_RABK,  KC_MINUS,KC_PIPE, KC_DLR,   KC_LCBR, KC_RCBR, KC_COLN, KC_CIRC,  XXXXXXX,  XXXXXXX,  XXXXXXX,          KC_INS,
         _______, KC_EXLM,  KC_ASTR, KC_SLASH, KC_EQUAL,KC_AMPR,           KC_HASH, KC_LPRN, KC_RPRN, KC_SCLN,  KC_DQUO,  XXXXXXX,  _______,          KC_END,
         _______,           KC_TILD, KC_PLUS,  KC_BSLS, KC_UNDS, KC_PERC,  KC_PERC, KC_AT,   KC_LBRC, KC_RBRC,  KC_DOT,   KC_QUOT,  _______, KC_PGUP,
         _______, _______,  _______,           _______,          _______,  _______,          _______,           _______,            KC_HOME, KC_PGDN, KC_END),
 
     [WIN_FN1] = LAYOUT_69_ansi(
-        KC_GRV,  KC_BRID,  KC_BRIU,  KC_TASK, KC_FILE, RGB_VAD, RGB_VAI,  KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,          RGB_TOG,
+        KC_GRV,  KC_EXLM,  KC_AT,   KC_HASH,  KC_DLR,  KC_PERC, KC_CIRC,  KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,  KC_UNDS,  KC_PLUS,  _______,          RGB_TOG,
         _______, KC_GRAVE, KC_LABK, KC_RABK,  KC_MINUS,KC_PIPE, KC_DLR,   KC_LCBR, KC_RCBR, KC_COLN, KC_CIRC,  XXXXXXX,  XXXXXXX,  XXXXXXX,          KC_INS,
         _______, KC_EXLM,  KC_ASTR, KC_SLASH, KC_EQUAL,KC_AMPR,           KC_HASH, KC_LPRN, KC_RPRN, KC_SCLN,  KC_DQUO,  XXXXXXX,  _______,          KC_END,
         _______,           KC_TILD, KC_PLUS,  KC_BSLS, KC_UNDS, KC_PERC,  KC_PERC, KC_AT,   KC_LBRC, KC_RBRC,  KC_DOT,   KC_QUOT,  _______, KC_PGUP,
