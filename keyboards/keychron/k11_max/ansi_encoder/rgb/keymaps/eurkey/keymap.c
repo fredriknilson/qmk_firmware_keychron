@@ -85,6 +85,9 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     NULL
 };
 
+// -------------------- Customer keycodes --------------------
+#define MAC_SEARCH              G(KC_SPC)
+
 // -------------------- Keymap --------------------
 	
 // clang-format off
@@ -122,7 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, BT_HST1,  BT_HST2,  BT_HST3, P2P4G,   _______, _______,  _______, _______, _______, _______,  _______,  _______,  _______,          KC_INS,
         KC_MUTE, KC_VOLD,  KC_VOLU,  KC_MPRV, KC_MPLY, KC_MNXT,           RGB_MOD, RGB_VAD, RGB_VAI, RGB_HUI,  _______,  _______,  _______,          KC_END,
         _______,           _______,  _______, _______, _______, _______,  _______, _______, _______, _______,  _______,  _______,  _______, KC_PGUP,
-        _______, _______,  _______,           _______,          _______,  _______,          _______,           _______,            KC_HOME, KC_PGDN, KC_END)
+        _______, _______,  _______,           MAC_SEARCH,       _______,  _______,          MAC_SEARCH,        _______,            KC_HOME, KC_PGDN, KC_END)
 };
 
 #if defined(ENCODER_MAP_ENABLE)
