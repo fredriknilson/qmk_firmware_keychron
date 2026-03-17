@@ -89,7 +89,7 @@ const key_override_t **key_overrides = (const key_override_t *[]){
 #define MAC_SEARCH              G(KC_SPC)
 
 // -------------------- Keymap --------------------
-	
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MAC_BASE] = LAYOUT_69_ansi(
@@ -111,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, KC_GRAVE, KC_LABK, KC_RABK,  KC_MINUS,KC_PIPE, KC_DLR,   KC_LCBR, KC_RCBR, KC_COLN, KC_CIRC,  XXXXXXX,  XXXXXXX,  XXXXXXX,          KC_INS,
         _______, KC_EXLM,  KC_ASTR, KC_SLASH, KC_EQUAL,KC_AMPR,           KC_HASH, KC_LPRN, KC_RPRN, KC_SCLN,  KC_DQUO,  XXXXXXX,  _______,          KC_END,
         _______,           KC_TILD, KC_PLUS,  KC_BSLS, KC_UNDS, KC_PERC,  KC_PERC, KC_AT,   KC_LBRC, KC_RBRC,  KC_DOT,   KC_QUOT,  _______, KC_PGUP,
-        _______, _______,  _______,           _______,          _______,  _______,          _______,           _______,            KC_HOME, KC_PGDN, KC_END),
+        _______, _______,  _______,           MAC_SEARCH,       _______,  _______,          MAC_SEARCH,        _______,            KC_HOME, KC_PGDN, KC_END),
 
     [WIN_FN1] = LAYOUT_69_ansi(
         KC_GRV,  KC_EXLM,  KC_AT,   KC_HASH,  KC_DLR,  KC_PERC, KC_CIRC,  KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,  KC_UNDS,  KC_PLUS,  _______,          RGB_TOG,
