@@ -86,39 +86,41 @@ const key_override_t **key_overrides = (const key_override_t *[]){
 };
 
 // -------------------- Customer keycodes --------------------
-#define MAC_SEARCH              G(KC_SPC)
+#define MAC_SEARCH      G(KC_SPC)
+#define CC_EUR          RALT(KC_5)    // €
+#define CC_ACUT         RALT(KC_QUOT) // ´
 
 // -------------------- Keymap --------------------
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MAC_BASE] = LAYOUT_69_ansi(
-        KC_ESC,  KC_1,	   KC_2,	 KC_3,	  KC_4,    KC_5,	KC_6,	  KC_7,    KC_8,	KC_9,	 KC_0,	   KC_MINS,  KC_EQL,   KC_BSPC,          KC_MUTE,
-        KC_TAB,  KC_Q,	   KC_W,	 KC_E,	  KC_R,    KC_T,	KC_Y,	  KC_U,    KC_I,	KC_O,	 KC_P,	   EU_ARNG,  KC_QUOT,  KC_SLSH,          KC_DEL,
-        MO(FN2), KC_A,     KC_S,     KC_D,    KC_F,    KC_G,              KC_H,    KC_J,    KC_K,    KC_L,     EU_ODIA,  EU_ADIA,  KC_ENT,           KC_HOME,
-        KC_LSFT,           KC_Z,	 KC_X,	  KC_C,    KC_V,	KC_B,	  KC_B,    KC_N,	KC_M,	 KC_COMM,  KC_DOT,	 KC_QUES,  KC_RSFT, KC_UP,
-        KC_LCTL, KC_LOPTN, KC_LCMMD, LT(MAC_FN1, KC_SPC), LT(FN2, KC_TAB), LT(FN2, KC_BSPC), LT(MAC_FN1, KC_ENT), KC_RALT,         KC_LEFT, KC_DOWN, KC_RGHT),
+        KC_ESC,  KC_1,	   KC_2,	 KC_3,	  KC_4,    KC_5,	KC_6,	 KC_7,    KC_8,	   KC_9,	 KC_0,	  KC_MINS,  KC_EQL,   KC_BSPC,            KC_MUTE,
+        KC_TAB,  KC_Q,	   KC_W,	 KC_E,	  KC_R,    KC_T,	         KC_Y,	  KC_U,    KC_I,	 KC_O,	  KC_P,	    EU_ARNG,  KC_QUOT,  KC_SLSH,  KC_DEL,
+        MO(FN2), KC_A,     KC_S,     KC_D,    KC_F,    KC_G,             KC_H,    KC_J,    KC_K,     KC_L,    EU_ODIA,  EU_ADIA,  KC_ENT,             KC_HOME,
+        KC_LSFT, KC_Z,	   KC_X,	 KC_C,    KC_V,	   KC_B,	KC_B,    KC_N,	  KC_M,	   KC_COMM,  KC_DOT,  KC_QUES,  KC_RSFT,             KC_UP,
+        KC_LCTL, KC_LOPTN, KC_LCMMD, LT(MAC_FN1, KC_SPC), LT(FN2, KC_TAB), LT(FN2, KC_BSPC), LT(MAC_FN1, KC_ENT), KC_RALT,          KC_LEFT, KC_DOWN, KC_RGHT),
 
     [WIN_BASE] = LAYOUT_69_ansi(
-        KC_ESC,  KC_1,	   KC_2,	 KC_3,	  KC_4,    KC_5,	KC_6,	  KC_7,    KC_8,	KC_9,	 KC_0,	   KC_MINS,  KC_EQL,   KC_BSPC,          KC_MUTE,
-        KC_TAB,  KC_Q,	   KC_W,	 KC_E,	  KC_R,    KC_T,	KC_Y,	  KC_U,    KC_I,	KC_O,	 KC_P,	   EU_ARNG,  KC_QUOT,  KC_SLSH,          KC_DEL,
-        MO(FN2), KC_A,	   KC_S,	 KC_D,	  KC_F,    KC_G,              KC_H,    KC_J,	KC_K,	 KC_L,	   EU_ODIA,  EU_ADIA,  KC_ENT,           KC_HOME,
-        KC_LSFT,           KC_Z,	 KC_X,	  KC_C,    KC_V,	KC_B,	  KC_B,    KC_N,	KC_M,	 KC_COMM,  KC_DOT,	 KC_QUES,  KC_RSFT, KC_UP,
-        KC_LCTL, KC_LALT,  KC_LWIN, KC_SPC, LT(FN2, KC_TAB), LT(FN2, KC_BSPC), LT(MAC_FN1, KC_ENT), KC_RALT,                       KC_LEFT, KC_DOWN, KC_RGHT),
+        KC_ESC,  KC_1,	   KC_2,	 KC_3,	  KC_4,    KC_5,	KC_6,	 KC_7,    KC_8,	   KC_9,	 KC_0,	  KC_MINS,  KC_EQL,   KC_BSPC,            KC_MUTE,
+        KC_TAB,  KC_Q,	   KC_W,	 KC_E,	  KC_R,    KC_T,	         KC_Y,	  KC_U,    KC_I,	 KC_O,	  KC_P,	    EU_ARNG,  KC_QUOT,  KC_SLSH,  KC_DEL,
+        MO(FN2), KC_A,     KC_S,     KC_D,    KC_F,    KC_G,             KC_H,    KC_J,    KC_K,     KC_L,    EU_ODIA,  EU_ADIA,  KC_ENT,             KC_HOME,
+        KC_LSFT, KC_Z,	   KC_X,	 KC_C,    KC_V,	   KC_B,	KC_B,    KC_N,	  KC_M,	   KC_COMM,  KC_DOT,  KC_QUES,  KC_RSFT,             KC_UP,
+        KC_LCTL, KC_LALT,  KC_LWIN, KC_SPC, LT(FN2, KC_TAB), LT(FN2, KC_BSPC), LT(MAC_FN1, KC_ENT), KC_RALT,                        KC_LEFT, KC_DOWN, KC_RGHT),
 
     [MAC_FN1] = LAYOUT_69_ansi(
-        KC_GRV,  KC_EXLM,  KC_AT,   KC_HASH,  KC_DLR,  KC_PERC, KC_CIRC,  KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,  KC_UNDS,  KC_PLUS,  _______,          RGB_TOG,
-        _______, KC_GRAVE, KC_LABK, KC_RABK,  KC_MINUS,KC_PIPE, KC_DLR,   KC_LCBR, KC_RCBR, KC_COLN, KC_CIRC,  XXXXXXX,  XXXXXXX,  XXXXXXX,          KC_INS,
-        _______, KC_EXLM,  KC_ASTR, KC_SLASH, KC_EQUAL,KC_AMPR,           KC_HASH, KC_LPRN, KC_RPRN, KC_SCLN,  KC_DQUO,  XXXXXXX,  _______,          KC_END,
-        _______,           KC_TILD, KC_PLUS,  KC_BSLS, KC_UNDS, KC_PERC,  KC_PERC, KC_AT,   KC_LBRC, KC_RBRC,  KC_DOT,   KC_QUOT,  _______, KC_PGUP,
-        _______, _______,  _______,           MAC_SEARCH,       _______,  _______,          MAC_SEARCH,        _______,            KC_HOME, KC_PGDN, KC_END),
+        _______, _______,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,            RGB_TOG,
+        _______, KC_EXLM,  KC_AT,   KC_HASH, KC_DLR,  KC_PERC,          KC_PIPE, KC_LCBR, KC_RCBR, KC_COLN, KC_QUOT, CC_EUR,  XXXXXXX, XXXXXXX,   KC_INS,
+        _______, KC_CIRC,  KC_AMPR, KC_ASTR, KC_MINS, KC_EQL,           KC_SLSH, KC_LPRN, KC_RPRN, KC_SCLN, KC_DQUO, XXXXXXX, _______,            KC_END,
+        _______, KC_GRV,   KC_TILD, CC_ACUT, KC_UNDS, KC_PLUS, XXXXXXX, KC_BSLS, KC_LBRC, KC_RBRC, KC_LABK, KC_RABK, _______,            KC_PGUP,
+        _______, _______,  _______,          MAC_SEARCH,       _______, _______,          MAC_SEARCH,       _______,            KC_HOME, KC_PGDN, KC_END),
 
     [WIN_FN1] = LAYOUT_69_ansi(
-        KC_GRV,  KC_EXLM,  KC_AT,   KC_HASH,  KC_DLR,  KC_PERC, KC_CIRC,  KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,  KC_UNDS,  KC_PLUS,  _______,          RGB_TOG,
-        _______, KC_GRAVE, KC_LABK, KC_RABK,  KC_MINUS,KC_PIPE, KC_DLR,   KC_LCBR, KC_RCBR, KC_COLN, KC_CIRC,  XXXXXXX,  XXXXXXX,  XXXXXXX,          KC_INS,
-        _______, KC_EXLM,  KC_ASTR, KC_SLASH, KC_EQUAL,KC_AMPR,           KC_HASH, KC_LPRN, KC_RPRN, KC_SCLN,  KC_DQUO,  XXXXXXX,  _______,          KC_END,
-        _______,           KC_TILD, KC_PLUS,  KC_BSLS, KC_UNDS, KC_PERC,  KC_PERC, KC_AT,   KC_LBRC, KC_RBRC,  KC_DOT,   KC_QUOT,  _______, KC_PGUP,
-        _______, _______,  _______,           _______,          _______,  _______,          _______,           _______,            KC_HOME, KC_PGDN, KC_END),
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,           RGB_TOG,
+        _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,          KC_PIPE, KC_LCBR, KC_RCBR, KC_COLN, KC_QUOT, CC_EUR,  XXXXXXX, XXXXXXX,  KC_INS,
+        _______, KC_CIRC, KC_AMPR, KC_ASTR, KC_MINS, KC_EQL,           KC_SLSH, KC_LPRN, KC_RPRN, KC_SCLN, KC_DQUO, XXXXXXX, _______,           KC_END,
+        _______, KC_GRV,  KC_TILD, CC_ACUT, KC_UNDS, KC_PLUS, XXXXXXX, KC_BSLS, KC_LBRC, KC_RBRC, KC_LABK, KC_RABK, _______,           KC_PGUP,
+        _______, _______, _______,          _______,          _______, _______,          _______,          _______,           KC_HOME, KC_PGDN, KC_END),
 
     [FN2] = LAYOUT_69_ansi(
         KC_F12,  KC_F1,    KC_F2,	 KC_F3,   KC_F4,   KC_F5,	KC_F6,	  KC_F7,   KC_F8,	KC_F9,	 KC_F10,   KC_F11,	 KC_F12,   _______,          _______,
