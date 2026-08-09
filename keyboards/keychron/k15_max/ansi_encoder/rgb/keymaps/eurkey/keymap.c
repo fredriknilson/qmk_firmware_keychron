@@ -143,7 +143,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX,    KC_TAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,       KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       EU_ARNG,    KC_QUOT,    KC_SLSH,    KC_DEL,
         XXXXXXX,    MO_FN2,     KC_A,       KC_S,       KC_D,       KC_F,       KC_G,       KC_H,       KC_J,       KC_K,       KC_L,       EU_ODIA,    EU_ADIA,    KC_ENT,     KC_HOME,
         XXXXXXX,    KC_LSFT,    KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,       KC_B,       KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_QUES,    KC_RSFT,    KC_UP,
-        XXXXXXX,    KC_LCTL,    KC_LALT,    KC_LGUI,    LT_FN1_SPC, LT_FN2_TAB, LT_FN1_ENT, KC_RGUI,    KC_RALT,    KC_LEFT,    KC_DOWN,    KC_RGHT),
+        XXXXXXX,    KC_LCTL,    KC_LALT,    KC_LGUI,    KC_SPC,     LT_FN2_TAB, LT_FN1_ENT, KC_RGUI,    KC_RALT,    KC_LEFT,    KC_DOWN,    KC_RGHT),
 
     [FN2] = LAYOUT_ansi_90(
         RGB_TOG,    _______,    KC_BRID,    KC_BRIU,    KC_MCTRL,   KC_LNPAD,   RGB_VAD,    RGB_VAI,    KC_MPRV,    KC_MPLY,    KC_MNXT,    KC_MUTE,    KC_VOLD,    KC_VOLU,    _______,    _______,
